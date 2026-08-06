@@ -2,6 +2,10 @@
 
 Start with an empty company workspace. Give Claude a website and one business objective, review the resulting Draft context, and then build a campaign from confirmed information.
 
+**Workshop start page:** <https://learnrudi.github.io/marketing-os-starter/>
+
+No GitHub account is required. Use the start page to download the starter as a ZIP and copy the opening prompt.
+
 ## Start here
 
 1. Open or connect this folder in Claude Cowork.

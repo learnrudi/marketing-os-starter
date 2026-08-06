@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download the MarketingOS Starter and build a reusable marketing workspace with Claude Cowork.">
+    <meta property="og:title" content="MarketingOS Starter">
+    <meta property="og:description" content="Turn a website and business objective into a reusable marketing workspace.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learnrudi.github.io/marketing-os-starter/">
+    <meta name="theme-color" content="#06211a">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>MarketingOS Starter</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #111111;
+        --forest: #06211a;
+        --green: #0b8f65;
+        --lime: #9aff36;
+        --paper: #f7f4ea;
+        --panel: #ffffff;
+        --line: #d8d0c2;
+        --muted: #595952;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      .skip-link {
+        position: absolute;
+        left: 16px;
+        top: -80px;
+        z-index: 10;
+        padding: 12px 16px;
+        color: var(--panel);
+        background: var(--ink);
+      }
+
+      .skip-link:focus { top: 16px; }
+
+      .shell {
+        width: min(1160px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 88px;
+        border-bottom: 1px solid rgba(17, 17, 17, .12);
+      }
+
+      .wordmark {
+        font-size: 19px;
+        font-weight: 850;
+        letter-spacing: -.02em;
+        text-decoration: none;
+      }
+
+      .repo-link {
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .repo-link:hover { color: var(--ink); }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+        gap: 72px;
+        align-items: end;
+        padding: 100px 0 88px;
+      }
+
+      .eyebrow {
+        margin: 0 0 20px;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 850;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 800px;
+        margin: 0;
+        font-size: clamp(54px, 6.9vw, 100px);
+        line-height: .87;
+        letter-spacing: -.065em;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--green);
+      }
+
+      .hero-copy {
+        margin: 28px 0 0;
+        max-width: 720px;
+        color: var(--muted);
+        font-size: clamp(20px, 2.1vw, 26px);
+        line-height: 1.42;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 22px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        color: var(--paper);
+        background: var(--ink);
+        font: inherit;
+        font-weight: 800;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .button:hover { background: var(--forest); }
+
+      .button.secondary {
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .button.secondary:hover { background: var(--panel); }
+
+      .access-note {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .hero-panel {
+        padding: 30px;
+        border-radius: 28px;
+        color: #edf3f3;
+        background: var(--forest);
+        box-shadow: 0 24px 70px rgba(6, 33, 26, .22);
+      }
+
+      .hero-panel .label {
+        margin: 0 0 50px;
+        color: var(--lime);
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      .hero-panel p {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 720;
+        line-height: 1.24;
+        letter-spacing: -.025em;
+      }
+
+      .hero-panel .formula {
+        margin-top: 26px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(237, 243, 243, .22);
+        color: #b9cbc6;
+        font: 14px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      section { padding: 88px 0; }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(42px, 5vw, 68px);
+        line-height: .98;
+        letter-spacing: -.045em;
+      }
+
+      .section-heading p {
+        max-width: 490px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .card {
+        min-height: 250px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, .72);
+      }
+
+      .number {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        margin-bottom: 52px;
+        border-radius: 50%;
+        color: var(--panel);
+        background: var(--green);
+        font-weight: 850;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 25px;
+        letter-spacing: -.025em;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.52;
+      }
+
+      .prompt-section {
+        color: #edf3f3;
+        background: var(--forest);
+      }
+
+      .prompt-layout {
+        display: grid;
+        grid-template-columns: .75fr 1.25fr;
+        gap: 60px;
+        align-items: start;
+      }
+
+      .prompt-section h2 { color: var(--panel); }
+
+      .prompt-intro {
+        margin: 22px 0 0;
+        color: #b9cbc6;
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .prompt-box {
+        overflow: hidden;
+        border: 1px solid rgba(237, 243, 243, .22);
+        border-radius: 22px;
+        background: rgba(0, 0, 0, .18);
+      }
+
+      pre {
+        overflow-x: auto;
+        min-height: 310px;
+        margin: 0;
+        padding: 30px;
+        font: 16px/1.62 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        white-space: pre-wrap;
+      }
+
+      .prompt-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 22px;
+        border-top: 1px solid rgba(237, 243, 243, .16);
+      }
+
+      .copy-button {
+        min-height: 44px;
+        padding: 0 18px;
+        border: 1px solid var(--lime);
+        border-radius: 999px;
+        color: var(--forest);
+        background: var(--lime);
+        font: inherit;
+        font-weight: 850;
+        cursor: pointer;
+      }
+
+      #copy-status {
+        min-height: 1.4em;
+        color: #b9cbc6;
+        font-size: 14px;
+      }
+
+      .inside {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .inside article {
+        padding: 28px 0;
+        border-top: 2px solid var(--ink);
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 34px 0 50px;
+        border-top: 1px solid rgba(17, 17, 17, .12);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer p { margin: 0; }
+
+      @media (max-width: 860px) {
+        .hero,
+        .prompt-layout { grid-template-columns: 1fr; }
+
+        .hero { gap: 42px; padding-top: 72px; }
+        .hero-panel { max-width: 560px; }
+        .cards, .inside { grid-template-columns: 1fr; }
+        .card { min-height: 0; }
+        .number { margin-bottom: 32px; }
+        .section-heading { align-items: start; flex-direction: column; }
+      }
+
+      @media (max-width: 540px) {
+        .shell { width: min(100% - 28px, 1160px); }
+        header { min-height: 72px; }
+        .repo-link { font-size: 13px; }
+        .hero { padding: 54px 0 62px; }
+        section { padding: 64px 0; }
+        .hero-panel { padding: 24px; }
+        .prompt-actions { align-items: flex-start; flex-direction: column; }
+        footer { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="shell">
+      <a class="wordmark" href="./">MarketingOS Starter</a>
+      <a class="repo-link" href="https://github.com/learnrudi/marketing-os-starter">View on GitHub ↗</a>
+    </header>
+
+    <main id="main">
+      <div class="shell hero">
+        <div>
+          <p class="eyebrow">Claude Cowork for Marketing</p>
+          <h1>Build your <span>MarketingOS.</span></h1>
+          <p class="hero-copy">Turn one website and one business objective into a reusable workspace for research, strategy, campaigns, creative, and approvals.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/learnrudi/marketing-os-starter/archive/refs/heads/main.zip">Download the starter</a>
+            <a class="button secondary" href="#prompt">Copy the starting prompt</a>
+          </div>
+          <p class="access-note">Public download · No GitHub account required</p>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="label">The starting inputs</p>
+          <p>Your website.<br>Your business objective.<br>Your approval.</p>
+          <p class="formula">context + skills + artifacts + human judgment</p>
+        </aside>
+      </div>
+
+      <section class="shell" aria-labelledby="steps-heading">
+        <div class="section-heading">
+          <h2 id="steps-heading">Start in three steps.</h2>
+          <p>You do not need Git, a terminal, or a GitHub account. Download the folder and work directly from the files.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="number">1</span>
+            <h3>Download</h3>
+            <p>Select the starter button and save the ZIP file to your computer.</p>
+          </article>
+          <article class="card">
+            <span class="number">2</span>
+            <h3>Unzip</h3>
+            <p>Open the archive and keep the complete MarketingOS folder together.</p>
+          </article>
+          <article class="card">
+            <span class="number">3</span>
+            <h3>Open in Cowork</h3>
+            <p>Connect the folder, paste the prompt below, and review Claude's drafts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="prompt-section" id="prompt" aria-labelledby="prompt-heading">
+        <div class="shell prompt-layout">
+          <div>
+            <p class="eyebrow">Your first instruction</p>
+            <h2 id="prompt-heading">Start with context, not content.</h2>
+            <p class="prompt-intro">Replace the bracketed fields. Claude will draft the foundation and stop for your confirmation before campaign production.</p>
+          </div>
+          <div class="prompt-box">
+            <pre id="prompt-text">Use the setup-company skill.
+
+Website: [YOUR WEBSITE]
+Business objective: [YOUR BUSINESS OBJECTIVE]
+
+Draft the company foundation from the website and objective. Clearly label every hypothesis, candidate claim, and item that needs my confirmation. Do not publish, send, purchase, or schedule anything.</pre>
+            <div class="prompt-actions">
+              <button class="copy-button" type="button" id="copy-prompt">Copy prompt</button>
+              <span id="copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell" aria-labelledby="inside-heading">
+        <div class="section-heading">
+          <h2 id="inside-heading">What is inside.</h2>
+          <p>A machine-readable system that separates enduring company context from campaign-specific execution.</p>
+        </div>
+        <div class="inside">
+          <article>
+            <h3>Foundation</h3>
+            <p>Objectives, research, personas, offers, evidence, brand, and operating rules.</p>
+          </article>
+          <article>
+            <h3>Reusable skills</h3>
+            <p>Procedures for setup, research, evidence gathering, campaign building, creative, and operations.</p>
+          </article>
+          <article>
+            <h3>Campaign workspaces</h3>
+            <p>Briefs, plans, calendars, assets, review logs, and command-center templates.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p>MarketingOS Starter</p>
+      <p><a href="https://github.com/learnrudi/marketing-os-starter">Inspect the complete public repository</a></p>
+    </footer>
+
+    <script>
+      const copyButton = document.querySelector('#copy-prompt');
+      const copyStatus = document.querySelector('#copy-status');
+
+      copyButton.addEventListener('click', async () => {
+        const prompt = document.querySelector('#prompt-text').textContent;
+
+        try {
+          await navigator.clipboard.writeText(prompt);
+          copyStatus.textContent = 'Copied to clipboard.';
+          copyButton.textContent = 'Copied';
+        } catch {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(document.querySelector('#prompt-text'));
+          selection.removeAllRanges();
+          selection.addRange(range);
+          copyStatus.textContent = 'Prompt selected. Copy it with your keyboard.';
+        }
+      });
+    </script>
+  </body>
+</html>
