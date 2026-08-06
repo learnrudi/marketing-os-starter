@@ -1,0 +1,2 @@
+date,channel,asset_id,content_type,audience,objective,owner,status,approval_status,publish_destination,source_file,notes
+{{DATE}},{{CHANNEL}},{{ASSET_ID}},{{CONTENT_TYPE}},{{AUDIENCE}},{{OBJECTIVE}},{{OWNER}},Planned,Not requested,{{DESTINATION}},{{SOURCE_FILE}},{{NOTES}}

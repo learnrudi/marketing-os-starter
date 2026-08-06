@@ -1,0 +1,2 @@
+asset_id,asset_name,scope,type,source_path,working_path,export_path,channel,dimensions,rights,approval_status,owner,last_updated,notes
+{{ASSET_ID}},{{ASSET_NAME}},Campaign,{{TYPE}},{{SOURCE_PATH}},{{WORKING_PATH}},{{EXPORT_PATH}},{{CHANNEL}},{{DIMENSIONS}},{{RIGHTS}},Not requested,{{OWNER}},{{LAST_UPDATED}},{{NOTES}}

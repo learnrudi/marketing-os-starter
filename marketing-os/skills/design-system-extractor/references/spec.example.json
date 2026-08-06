@@ -1,0 +1,256 @@
+{
+  "orgName": "Northstar Studio",
+  "subtitle": "A fictional example for building on-brand campaign and social assets",
+  "sourceNote": "Fictional example derived from example.com — replace every value with evidence from the supplied website.",
+  "sourcePages": [
+    {
+      "url": "https://example.com/",
+      "label": "Homepage",
+      "capturedAt": "2026-07-14"
+    },
+    {
+      "url": "https://example.com/about",
+      "label": "About",
+      "capturedAt": "2026-07-14"
+    }
+  ],
+  "accentColor": "2457FF",
+  "overview": [
+    "Northstar Studio uses a high-contrast editorial system with deep navy foundations, electric blue calls to action, and warm coral highlights.",
+    "The system balances precise data-oriented structure with soft atmospheric imagery and generous space for concise messaging."
+  ],
+  "palettes": [
+    {
+      "title": "Core Palette",
+      "intro": "Use navy and warm white for most surfaces; reserve electric blue and coral for emphasis.",
+      "colors": [
+        { "hex": "0B163F", "name": "Deep Navy", "usage": "Primary dark backgrounds and headings" },
+        { "hex": "F7F4EC", "name": "Warm White", "usage": "Primary light background" },
+        { "hex": "2457FF", "name": "Electric Blue", "usage": "Primary CTA and active states" },
+        { "hex": "FF735C", "name": "Signal Coral", "usage": "Secondary accent and data highlights" },
+        { "hex": "A9B6D3", "name": "Mist Blue", "usage": "Secondary text and quiet dividers" }
+      ]
+    }
+  ],
+  "typography": [
+    { "name": "Inter", "description": "Primary interface and body family with a neutral, precise tone." },
+    { "name": "DM Serif Display", "description": "Selective display face for campaign headlines and editorial moments." }
+  ],
+  "typeScale": [
+    "Display — DM Serif Display, 64–88 px desktop, compact line height",
+    "Section heading — Inter Bold, 32–48 px",
+    "Body — Inter Regular, 16–20 px",
+    "Label — Inter SemiBold, 12–14 px, slight positive tracking"
+  ],
+  "logoNotes": [
+    "Use the full horizontal lockup on light surfaces and the reversed lockup on navy.",
+    "Keep clear space equal to the cap height of the wordmark; do not place it inside generated imagery."
+  ],
+  "imageryNotes": [
+    "Favor atmospheric gradients, topographic line work, and softly lit architectural or workspace photography.",
+    "Keep one quiet region in every campaign image for an editable headline and CTA overlay."
+  ],
+  "components": [
+    {
+      "name": "Primary button",
+      "description": "Electric blue fill with warm-white text and a compact 8 px radius.",
+      "previewLabel": "Start a Project",
+      "bg": "2457FF",
+      "color": "F7F4EC",
+      "borderRadius": "8px",
+      "fontWeight": "700",
+      "fontSize": "16px",
+      "padding": "12px 20px"
+    },
+    {
+      "name": "Coral signal pill",
+      "description": "Small coral capsule for a category, metric, or campaign label.",
+      "previewLabel": "New Insight",
+      "bg": "FF735C",
+      "color": "0B163F",
+      "borderRadius": "999px",
+      "fontWeight": "700",
+      "fontSize": "12px",
+      "padding": "7px 13px"
+    }
+  ],
+  "templates": [
+    { "name": "Feed post — 4:5", "description": "Atmospheric background, serif headline in the upper third, short proof point, and blue CTA." },
+    { "name": "Story cover — 9:16", "description": "Full-bleed scene with an open left column for native text and a small coral signal pill." },
+    { "name": "Carousel — 4:5", "description": "Warm-white content cards connected by blue topographic or orbital line motifs." }
+  ],
+  "assetPrompts": [
+    {
+      "category": "Background",
+      "name": "Navy orbital field",
+      "intendedUse": "Feed post and presentation title background",
+      "aspectRatios": ["4:5", "16:9"],
+      "palette": ["0B163F", "2457FF", "A9B6D3"],
+      "prompt": "Abstract premium campaign background on a deep navy #0B163F field, thin orbital paths and restrained topographic contours in electric blue #2457FF and mist blue #A9B6D3, subtle depth, precise editorial geometry, soft directional glow from the upper right, high negative space across the left 45 percent for an editable headline, crisp edges, sophisticated technology studio mood, no embedded typography.",
+      "negativePrompt": "No words, letters, numbers, logos, watermarks, signatures, neon rainbow colors, busy central subject, clip-art, or illegible symbols.",
+      "layeringNotes": "Place warm-white or coral SVG text in the open left column; keep the logo as a separate vector layer."
+    },
+    {
+      "category": "Background",
+      "name": "Warm editorial horizon",
+      "intendedUse": "Quote card and campaign announcement",
+      "aspectRatios": ["1:1", "4:5"],
+      "palette": ["F7F4EC", "FF735C", "2457FF"],
+      "prompt": "Minimal warm-white #F7F4EC editorial background with a low abstract horizon made from one coral #FF735C translucent plane and one electric-blue #2457FF arc, tactile paper-lighting, gentle shadow separation, quiet upper two-thirds for copy, modern art-direction studio aesthetic, controlled asymmetry, high-resolution texture without visible grain clumps.",
+      "negativePrompt": "No text, alphabet characters, logos, watermarks, photographs of people, heavy noise, stock-template look, or additional colors.",
+      "layeringNotes": "Use navy native text and an electric-blue CTA beneath the headline."
+    },
+    {
+      "category": "Texture",
+      "name": "Soft paper and contour grain",
+      "intendedUse": "Overlay texture at 10–25 percent opacity",
+      "aspectRatios": ["1:1", "16:9"],
+      "palette": ["F7F4EC", "A9B6D3"],
+      "prompt": "Seamless subtle material texture combining warm-white #F7F4EC uncoated paper fibers with extremely faint mist-blue #A9B6D3 contour lines, even illumination, low contrast, tileable edges, refined editorial print finish, designed for overlay use.",
+      "negativePrompt": "No words, logos, stains, folds, torn edges, high-contrast scratches, objects, frames, or dark vignette.",
+      "layeringNotes": "Blend with Multiply or Soft Light and keep editable type above the texture."
+    },
+    {
+      "category": "Texture",
+      "name": "Electric glass haze",
+      "intendedUse": "Dark-mode hero plate and motion backdrop",
+      "aspectRatios": ["9:16", "16:9"],
+      "palette": ["0B163F", "2457FF", "FF735C"],
+      "prompt": "Deep navy #0B163F atmospheric glass haze with one diffused electric-blue #2457FF light bloom and a very small coral #FF735C reflected edge, cinematic but abstract, premium translucent layers, controlled grain, dark negative space in the center for editable copy, soft parallax-ready depth.",
+      "negativePrompt": "No typography, logos, planets, faces, products, lens-flare text, rainbow gradients, watermarks, or dense particles.",
+      "layeringNotes": "Crop into motion plates and animate a slow two-percent scale change behind native text."
+    },
+    {
+      "category": "Icon System",
+      "name": "Precision navigation icons",
+      "intendedUse": "Feature cards and carousel navigation",
+      "aspectRatios": ["1:1"],
+      "palette": ["0B163F", "2457FF", "FF735C"],
+      "prompt": "A coherent sheet of twelve minimal vector-style interface icons for strategy, research, collaboration, growth, reporting, launch, security, and support; consistent 2 px rounded stroke, deep navy #0B163F lines, electric-blue #2457FF primary accent, one restrained coral #FF735C signal dot, simple geometric construction, generous spacing, flat transparent-looking background, no text labels.",
+      "negativePrompt": "No words, letters, logos, gradients, 3D emoji, photorealism, mixed stroke weights, shadows, watermarks, or brand marks.",
+      "layeringNotes": "Treat generated icons as direction; redraw or vectorize approved symbols before production use."
+    },
+    {
+      "category": "Illustration",
+      "name": "Connected insight map",
+      "intendedUse": "Explainer carousel and report cover",
+      "aspectRatios": ["4:5", "16:9"],
+      "palette": ["F7F4EC", "0B163F", "2457FF", "FF735C"],
+      "prompt": "Editorial systems illustration on warm white #F7F4EC: a small network of navy #0B163F nodes connected by electric-blue #2457FF orbital paths, a few coral #FF735C decision markers, precise thin lines, balanced asymmetry, generous blank margin, human-centered strategy and insight metaphor without literal dashboards, clean vector-print aesthetic.",
+      "negativePrompt": "No text, labels, logos, stock business people, handshake imagery, pseudo-data numbers, watermarks, or crowded infographic panels.",
+      "layeringNotes": "Reserve the top-left margin for an editable title and add verified data labels separately."
+    },
+    {
+      "category": "Photography",
+      "name": "Collaborative studio documentary",
+      "intendedUse": "Website-derived social proof and culture post",
+      "aspectRatios": ["4:5", "9:16"],
+      "palette": ["0B163F", "F7F4EC", "2457FF"],
+      "prompt": "Editorial documentary photograph of a small multidisciplinary team collaborating in a modern daylight studio, authentic working moment rather than posing, warm-white architectural surfaces, deep-navy wardrobe accents, one subtle electric-blue object, soft window light, natural skin texture, medium-wide composition, open negative space above and to the left for editable copy, premium magazine color grade.",
+      "negativePrompt": "No text, logos, watermarks, staged handshake, everyone staring at camera, exaggerated smiles, distorted hands, unreadable screen text, or generic corporate stock-photo lighting.",
+      "layeringNotes": "Use only when the site supports people-led photography; otherwise replace with the observed photography direction."
+    },
+    {
+      "category": "Data Motif",
+      "name": "Signal and trajectory plate",
+      "intendedUse": "Metric card and results carousel",
+      "aspectRatios": ["1:1", "4:5"],
+      "palette": ["0B163F", "2457FF", "FF735C", "A9B6D3"],
+      "prompt": "Abstract data-trajectory composition on deep navy #0B163F, one clear electric-blue #2457FF rising path, mist-blue #A9B6D3 reference grid, a single coral #FF735C focal marker, spacious premium visualization style, no numeric labels, accurate geometry, quiet lower-right region for an editable proof point and source line.",
+      "negativePrompt": "No numbers, letters, fake charts, logos, stock tickers, watermarks, rainbow data series, clutter, or misleading axes.",
+      "layeringNotes": "Add verified metrics and source attribution as native text; do not imply a quantitative claim from the background alone."
+    }
+  ],
+  "marketingCopy": {
+    "voiceTraits": ["Clear", "Assured", "Curious", "Specific", "Warm without being casual"],
+    "audiences": ["Teams turning complex information into a focused decision", "Organizations preparing a new product, campaign, or change initiative"],
+    "messagingPillars": [
+      {
+        "name": "Clarity before execution",
+        "description": "The studio helps teams identify the decision and message before producing assets.",
+        "evidence": "Repeated homepage emphasis on direction, focus, and useful outcomes.",
+        "sourceUrls": ["https://example.com/"]
+      },
+      {
+        "name": "Strategy made usable",
+        "description": "Research becomes a practical system that teams can apply across channels.",
+        "evidence": "About-page language connects insight with repeatable tools.",
+        "sourceUrls": ["https://example.com/about"]
+      },
+      {
+        "name": "A collaborative working model",
+        "description": "The brand presents the work as a close partnership, not a black-box handoff.",
+        "evidence": "Calls to action and process language invite shared exploration.",
+        "sourceUrls": ["https://example.com/", "https://example.com/about"]
+      }
+    ],
+    "sourceCopy": [
+      {
+        "text": "A focused path from insight to action.",
+        "sourceUrl": "https://example.com/",
+        "location": "Homepage hero",
+        "intendedUse": "Messaging evidence only; replace with actual observed excerpt."
+      },
+      {
+        "text": "Build the system your team can keep using.",
+        "sourceUrl": "https://example.com/about",
+        "location": "About page section heading",
+        "intendedUse": "Messaging evidence only; replace with actual observed excerpt."
+      }
+    ],
+    "proofPoints": [
+      {
+        "text": "Fictional placeholder proof point — replace with a verified fact from the source site.",
+        "sourceUrl": "https://example.com/"
+      }
+    ],
+    "derivedCopy": {
+      "headlines": [
+        "Find the signal. Build what follows.",
+        "Clarity your whole team can use.",
+        "Turn insight into a working system.",
+        "A sharper direction for the next launch.",
+        "Make the complex easier to act on.",
+        "From scattered inputs to one clear story."
+      ],
+      "subheads": [
+        "We connect research, strategy, and design so your next decision becomes easier to make and easier to explain.",
+        "A collaborative process for turning complex ideas into practical tools, campaigns, and experiences.",
+        "Build a clear message and a reusable system before production begins."
+      ],
+      "ctas": ["Start a Project", "Explore the Process", "See the System", "Bring Us the Challenge", "Plan the Next Launch", "Talk Through the Brief"],
+      "socialHooks": [
+        "The asset is rarely the first problem. The missing decision is.",
+        "If every channel tells a different story, start with the system.",
+        "A good strategy should survive the handoff.",
+        "Before you make more content, make the message easier to repeat."
+      ],
+      "bodyBlocks": [
+        {
+          "name": "Campaign introduction",
+          "text": "Bring the research, opinions, and half-formed ideas. We will help shape them into a clear direction and a system your team can carry forward."
+        },
+        {
+          "name": "Social proof setup",
+          "text": "The goal is not another presentation that gets filed away. It is a shared way to make the next decision, brief the next asset, and keep the story consistent."
+        }
+      ]
+    },
+    "claimsToVerify": [
+      "Replace the fictional proof point with a sourced fact.",
+      "Confirm that strategy, research, and design are all current service offerings.",
+      "Confirm preferred CTA language and capitalization."
+    ],
+    "notes": [
+      "All derived copy is draft language, not text observed on the website.",
+      "Keep copy editable when compositing it over generated backgrounds."
+    ]
+  },
+  "consistencyTitle": "Consistency Notes",
+  "consistencyNotes": [
+    "Reserve coral for a single signal or emphasis per composition.",
+    "Do not mix the serif display face into small UI or body copy.",
+    "Generated backgrounds should preserve deliberate empty space for native text."
+  ],
+  "footerNote": "This is a fictional schema example. Re-check live styles, messaging, legal claims, and font licensing before a real campaign."
+}

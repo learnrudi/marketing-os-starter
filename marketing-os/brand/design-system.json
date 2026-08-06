@@ -1,0 +1,32 @@
+{
+  "orgName": "[NEEDS INPUT]",
+  "subtitle": "Draft canonical design system",
+  "sourceNote": "Run the design-system-extractor skill against approved source material, then obtain human confirmation before treating the result as canonical.",
+  "sourcePages": [],
+  "overview": [],
+  "palettes": [],
+  "typography": [],
+  "typeScale": [],
+  "logoNotes": [],
+  "imageryNotes": [],
+  "components": [],
+  "templates": [],
+  "consistencyNotes": [],
+  "assetPrompts": [],
+  "marketingCopy": {
+    "voiceTraits": [],
+    "audiences": [],
+    "messagingPillars": [],
+    "sourceCopy": [],
+    "proofPoints": [],
+    "claimsToVerify": [],
+    "derivedCopy": {
+      "headlines": [],
+      "subheads": [],
+      "ctas": [],
+      "socialHooks": [],
+      "bodyBlocks": []
+    },
+    "notes": []
+  }
+}
