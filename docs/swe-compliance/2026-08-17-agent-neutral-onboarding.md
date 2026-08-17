@@ -1,6 +1,6 @@
 # Agent-Neutral Onboarding Compliance Checklist
 
-Status: In progress
+Status: Complete
 Owner: RUDI
 Date: 2026-08-17
 
@@ -60,4 +60,4 @@ Date: 2026-08-17
 - [x] Final files touched: `AGENTS.md`, `START-HERE.md`, `README.md`, `docs/index.html`, `marketing-os/system/approval-rules.md`, `tests/onboarding-contract.test.mjs`, and this checklist.
 - [x] Commands run and results: red test failed on missing `START-HERE.md`; unchanged behavior contract passed after implementation and refactor; full Node tests and syntax checks passed; rendered desktop/mobile and clipboard smoke checks passed; `git diff --check` passed.
 - [x] Accepted debt: this dependency-free repository has no automated accessibility or visual-regression runner. Semantic DOM, keyboard-native controls, ARIA live status, desktop/mobile screenshots, and overflow checks were reviewed manually. The installed `tidy` build is HTML4-era and rejected valid HTML5 landmarks, so it was not treated as authoritative.
-- [ ] Definition of Done: onboarding contract passes, user flow is smoke-tested, docs agree, only task files are committed, and the published GitHub branch is updated.
+- [x] Definition of Done: onboarding contract passes, user flow is smoke-tested, docs agree, only task files were committed, and implementation commit `3bce9b8` was published to GitHub `main`.
