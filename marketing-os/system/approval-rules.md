@@ -6,11 +6,11 @@ Last reviewed: `[NEEDS INPUT]`
 
 ## Default rule
 
-Claude may organize, analyze, draft, and update local working files. A designated human must approve anything that is sent, published, purchased, scheduled externally, or used to change an external system.
+The AI agent may organize, analyze, draft, and update local working files. A designated human must approve anything that is sent, published, purchased, scheduled externally, or used to change an external system.
 
 ## Approval matrix
 
-| Action | Claude may prepare | Human approval required | Approver |
+| Action | Agent may prepare | Human approval required | Approver |
 | --- | --- | --- | --- |
 | Research summary | Yes | Before treating uncertain findings as fact | `[NEEDS INPUT]` |
 | Campaign brief or plan | Yes | Before production begins | `[NEEDS INPUT]` |

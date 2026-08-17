@@ -1,29 +1,33 @@
 # MarketingOS Starter
 
-Start with an empty company workspace. Give Claude a website and one business objective, review the resulting Draft context, and then build a campaign from confirmed information.
+Start with an empty company workspace. Give a file-capable AI agent a website and one business objective, review the resulting Draft context, and then build a campaign from confirmed information.
 
 **Workshop start page:** <https://learnrudi.github.io/marketing-os-starter/>
 
-No GitHub account is required. Use the start page to download the starter as a ZIP and copy the opening prompt.
+No GitHub account is required. Use the start page to download the starter as a ZIP and copy the universal onboarding prompt. The same instructions are available offline in [`START-HERE.md`](START-HERE.md).
 
 ## Start here
 
-1. Open or connect this folder in Claude Cowork.
-2. Give Claude your website and one concrete business objective.
-3. Ask Claude to use the `setup-company` skill.
-4. Review every Draft, Hypothesis, Candidate, and `[NEEDS INPUT]` item.
-5. Confirm or correct the company context before campaign production.
+1. Download and unzip the complete starter folder.
+2. Open or connect the folder in a file-capable AI agent.
+3. Paste the universal prompt from [`START-HERE.md`](START-HERE.md).
+4. Answer the agent's questions about your website and one concrete business objective.
+5. Review every Draft, Hypothesis, Candidate, and `[NEEDS INPUT]` item.
+6. Confirm or correct the company context before campaign production.
 
-Example starting request:
+The prompt instructs the agent to read the setup procedure directly, ask for the two required inputs, protect existing work, and stop for confirmation. A minimal equivalent request is:
 
 ```text
-Use the setup-company skill.
-
-Website: https://example.com
-Business objective: Generate $50,000 in workshop revenue this year.
+Read START-HERE.md and begin the MarketingOS onboarding. Ask me for the two required inputs.
 ```
 
 Optional context may include geography, target market, known offers, existing customers, or approved evidence. The setup skill must continue safely when only the two required inputs are available.
+
+## Agent compatibility
+
+The workspace uses Markdown, JSON, CSV, HTML, and ordinary folders. It can work with any AI agent that can read and write the downloaded folder and follow the embedded `SKILL.md` procedures. Website setup and market research also require authorized browser or internet access.
+
+A chat interface without access to the local folder cannot operate the MarketingOS directly. Automatic skill discovery varies by agent, so the universal prompt names the exact setup instruction file.
 
 ## What setup creates
 
@@ -54,7 +58,9 @@ After confirming the first pass:
 
 ```text
 marketing-os-starter/
+├── AGENTS.md
 ├── README.md
+├── START-HERE.md
 ├── business/
 │   └── objectives/
 └── marketing-os/
